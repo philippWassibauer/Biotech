@@ -1,0 +1,23 @@
+Django==1.3
+django-uni-form==0.7.0
+PIL
+werkzeug
+Fabric==0.9.1
+nose==0.11.4
+
+-e git+git://github.com/jezdez/django_compressor.git#egg=django-compressor
+
+south==0.7.2
+django-cms==2.1.1
+django-extensions==0.5
+django-reversion==1.3.1
+
+django-nose
+
+gunicorn==0.12.0
+
+-e git+git://github.com/ericholscher/django-test-utils.git#egg=django-test-utils
+boto==2.0b3
+
+python-memcached==1.47
+django-memcached==0.1.2
