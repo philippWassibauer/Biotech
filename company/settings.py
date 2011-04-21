@@ -47,7 +47,7 @@ SECRET_KEY = "3vs@$=9vk93(+p9##9iew_yl-&fq^9u+jp@#i(me$je5sx@1*)"
 #PINAX_ROOT = os.path.abspath(os.path.dirname(pinax.__file__))
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 FIXTURE_DIRS = (os.path.join(PROJECT_ROOT, 'fixtures'),)
-
+#CMS_ROOT = os.path.abspath(os.path.dirname(cms.__file__))
 
 # tells Pinax to use the default theme
 #PINAX_THEME = "default"
@@ -76,6 +76,7 @@ LANGUAGES = (
     ("en", gettext("English")),
 )
 
+
 USE_I18N = True
 USE_L10N = True
 
@@ -98,9 +99,29 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, "site_media", "static")
 # Example: "http://media.lawrence.com"
 STATIC_URL = "/site_media/static/"
 
+
+CMS_MEDIA_ROOT = os.path.join(STATIC_ROOT, "cms/")
+CMS_MEDIA_URL  = STATIC_URL + "cms/"
+#CMS_MEDIA_PATH = "cms/"
+#CMS_MEDIA_ROOT = MEDIA_ROOT + CMS_MEDIA_PATH
+#CMS_LANGUAGES = LANGUAGES
+#CMS_DBGETTEXT = False
+#CMS_SOFTROOT = True
+#CMS_MEDIA_URL = STATIC_URL + "cms/"
+#CMS_PERMISSION = False
+#CMS_MODERATOR = False #keep this off for now, causes bug that hides all content in non edit modus
+#CMS_SEO_FIELDS = True
+#CMS_FLAT_URLS = True
+CMS_TEMPLATES = (
+        ("cms_base.html", gettext("default")),
+)
+
 # Additional directories which hold static files
+from imp import find_module
 STATICFILES_DIRS = (
     ('', os.path.join(PROJECT_ROOT, "media")),
+    ('', os.path.join(os.path.abspath(find_module("cms")[1]), 'media')),
+    #('', os.path.join(CMS_ROOT, "media")),
 )
 
 COMPRESS_ROOT = STATIC_ROOT
@@ -168,23 +189,24 @@ AUTHENTICATION_BACKENDS = (
 AUTH_PROFILE_MODULE = "profiles.Profile"
 
 MIDDLEWARE_CLASSES = [
-    "django.middleware.cache.UpdateCacheMiddleware",
+    #"django.middleware.cache.UpdateCacheMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.doc.XViewMiddleware",
-    "pinax.middleware.security.HideSensistiveFieldsMiddleware",
+
+    'cms.middleware.page.CurrentPageMiddleware',
+    'cms.middleware.user.CurrentUserMiddleware',
+    'cms.middleware.toolbar.ToolbarMiddleware',
+    'cms.middleware.media.PlaceholderMediaMiddleware',
+    #"pinax.middleware.security.HideSensistiveFieldsMiddleware",
     #"debug_toolbar.middleware.DebugToolbarMiddleware",
+    #'pagination.middleware.PaginationMiddleware',
 
 
-    'djangobb_forum.middleware.LastLoginMiddleware',
-    'djangobb_forum.middleware.UsersOnline',
-    'pagination.middleware.PaginationMiddleware',
-
-
-    "django.middleware.cache.FetchFromCacheMiddleware",
+    #"django.middleware.cache.FetchFromCacheMiddleware",
     #"django.middleware.gzip.GZipMiddleware",
 ]
 
@@ -202,12 +224,13 @@ TEMPLATE_CONTEXT_PROCESSORS = [
     "django.core.context_processors.request",
     "django.contrib.messages.context_processors.messages",
 
+    'cms.context_processors.media',
     # exports CONTACT_EMAIL, SITE_NAME, STATIC_URL
-    "pinax.core.context_processors.pinax_settings",
-    "pinax.apps.account.context_processors.account", # used in messages
+    #"pinax.core.context_processors.pinax_settings",
+    #"pinax.apps.account.context_processors.account", # used in messages
 
     #"support.context_processors.ticket_count",
-    'notification.context_processors.notification',
+    #'notification.context_processors.notification',
 ]
 
 SKIP_SOUTH_TESTS = True
@@ -271,15 +294,6 @@ ACCOUNT_REQUIRED_EMAIL = False
 ACCOUNT_UNIQUE_EMAIL = EMAIL_CONFIRMATION_UNIQUE_EMAIL = True
 
 
-CMS_MEDIA_URL = STATIC_URL + "cms/"
-CMS_PERMISSION = False
-CMS_MODERATOR = False #keep this off for now, causes bug that hides all content in non edit modus
-CMS_SEO_FIELDS = True
-CMS_FLAT_URLS = True
-CMS_TEMPLATES = (
-        ("cms_base.html", gettext("default")),
-        ("cms_3cols.html", gettext("3 Cols")),
-)
 
 DEBUG_TOOLBAR_CONFIG = {
     "INTERCEPT_REDIRECTS": False,

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load cms_tags menu_tags %}
+
+{% block base_body %}
+    <div class="image-header">
+        {% block content_header %}
+            {% placeholder "content_header" %}
+        {% endblock %}
+    </div>
+    <div class="cms-main-column">
+        {% block main_column %}
+            {% placeholder "main_column" %}
+        {% endblock %}
+        &nbsp;
+    </div>
+    <div class="cms-right-column">
+        {% block right_column %}
+            {% placeholder "right_column" %}
+        {% endblock %}
+        &nbsp;
+    </div>
+{% endblock %}

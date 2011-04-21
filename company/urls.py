@@ -5,12 +5,15 @@ from django.contrib import admin
 from django.contrib.auth.models import User
 admin.autodiscover()
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-
+from django.conf.urls.static import static
 
 urlpatterns = patterns("",
+    (r"^admin/", include(admin.site.urls)),
     url(r'^', include('cms.urls')),
 )
 
 if settings.SERVE_MEDIA:
     urlpatterns += staticfiles_urlpatterns()
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
 

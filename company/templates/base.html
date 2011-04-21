@@ -1,0 +1,108 @@
+{% load i18n %}
+{% load static menu_tags %}
+{% get_static_prefix as STATIC_URL %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}" xml:lang="{{ LANGUAGE_CODE }}" lang="{{ LANGUAGE_CODE }}">
+    <head>
+        <!-- {_% load compress %} -->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{% block head_title_base %}{% if SITE_NAME %}{{ SITE_NAME }}:{% endif %}{% block head_title %}{% endblock %}{% endblock %}</title>
+        <meta name="description" content="{% block head_description %}{% endblock %}" />
+        <meta name="keywords" lang="de" content="{% block head_keywords %}{% endblock %}" />
+        <meta name="robots" content="index,follow" />
+        <meta name="robots" content="all" />
+        <meta name="content-language" content="de" />
+        <meta name="revisit-after" content="1 days" />
+        <meta name="author" content="Bio-Tech" />
+        <meta name="publisher" content="Bio-Tech" />
+        <meta name="copyright" content="Bio-Tech" />
+        <meta name="page-topic" content="Pest Kontrolle" />
+        <meta name="audience" content="all" />
+        <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.png" type="image/ico" />
+
+        <!--{_% compress css %} -->
+            <link rel="stylesheet" href="{{ STATIC_URL }}css/ui-lightness/jquery-ui-1.8.4.custom.css" />
+            <link rel="stylesheet" href="{{ STATIC_URL }}pinax/css/facebox.css" />
+            <link rel="stylesheet" href="{{ STATIC_URL }}pinax/css/accounts.css" />
+            <link rel="stylesheet" href="{{ STATIC_URL }}uni_form/uni-form-generic.css" />
+            <link rel="stylesheet" href="{{ STATIC_URL }}uni_form/uni-form.css" />
+            <!-- Base should overwrite all of the other css files -->
+            <link rel="stylesheet" href="{{ STATIC_URL }}css/base.css" />
+            {% block css_block %}
+            {% endblock %}
+        <!-- {_% endcompress %} -->
+
+         <!--[if IE]>
+             <link rel="stylesheet" href="{{ STATIC_URL }}css/ie.css" />
+             <style>
+                div {
+                    zoom: 1; /* trigger hasLayout */
+                }
+             </style>
+         <![endif]-->
+
+        {% block extra_head_base %}
+            {% block extra_head %}{% endblock %}
+        {% endblock %}
+
+        <script src="{% block jquery_src %}{{ STATIC_URL }}js/jquery-1.5.2.min.js{% endblock %}" type="text/javascript"></script>
+    </head>
+
+    <body class="{% block body_class %}{% endblock %}">
+        <div class="body_wrapper">
+            {% block body_outer %}
+                <div id="body">
+                    {% block header %}
+                        <div class="header">
+                            <a  class="logo" href="/">
+                                <img src="{{ STATIC_URL }}img/logo.png" alt="BIO-TECH" />
+                            </a>
+
+                            <div class="slogan">{% trans "Kontrolle ist besser" %}</div>
+
+                            <div class="main-menu">
+                                <ul>{% show_menu %}</ul>
+                            </div>
+                            <div class="submenu">
+                                <ul>
+                                    {% show_sub_menu 1 %}
+                                </ul>
+                            </div>
+                        </div>
+                    {% endblock %}
+                    {% block base_body %}
+                    {% endblock %}
+                    <div style="clear: both;"></div>
+                </div>
+            {% endblock %}
+            <div style="clear: both;"></div>
+        </div>
+
+        <div class="footer">
+            <div class="content_area">
+                <div class="hotline">+43 (0)662 433 118</div>
+                <div class="legal">{% show_menu_below_id "legal" %}</div>
+                <div class="copyright">{% trans "Design by Inspiranto" %}</div>
+            </div>
+        </div>
+
+        <!-- {_% compress js %} -->
+            <script src="{{ STATIC_URL }}js/jquery-ui-1.8.4.custom.min.js" type="text/javascript"></script>
+            <script src="{{ STATIC_URL }}js/base.js" type="text/javascript"></script>
+            <script src="{{ STATIC_URL }}pinax/js/base.js" type="text/javascript"></script>
+            <script src="{{ STATIC_URL }}uni_form/uni-form.jquery.js" type="text/javascript"></script>
+            <script src="{{ STATIC_URL }}pinax/js/facebox.js" type="text/javascript"></script>
+            <!--[if IE]>
+                 <script src="{{ STATIC_URL }}pie-1b4/PIE.js" type="text/javascript"></script>
+            <![endif]-->
+
+            {% block js_block %}
+            {% endblock %}
+        <!-- {_% endcompress %} -->
+
+        {% block extra_body_base %}
+            {% block extra_body %}{% endblock %}
+        {% endblock %}
+    </body>
+</html>

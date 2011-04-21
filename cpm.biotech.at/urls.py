@@ -7,6 +7,7 @@ admin.autodiscover()
 
 urlpatterns = patterns("",
     url(r'^', include('cms.urls')),
+    (r"^admin/", include(admin.site.urls)),
 )
 
 if settings.SERVE_MEDIA:
