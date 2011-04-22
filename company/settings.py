@@ -58,15 +58,15 @@ gettext = lambda s: s
 
 
 
-import logging
-import logging.handlers
-log_filename = os.path.join(PROJECT_ROOT, "logs", "biotech.log")
-logging.basicConfig(
-    level = logging.ERROR,
-    format = "%(asctime)s %(levelname)s: %(filename)s %(lineno)d %(message)s",
-    filemode = "w",
-    handler =  logging.handlers.RotatingFileHandler(log_filename, maxBytes=20, backupCount=5)
-)
+#import logging
+#import logging.handlers
+#log_filename = os.path.join(PROJECT_ROOT, "logs", "biotech.log")
+#logging.basicConfig(
+#    level = logging.ERROR,
+#    format = "%(asctime)s %(levelname)s: %(filename)s %(lineno)d %(message)s",
+#    filemode = "w",
+#    handler =  logging.handlers.RotatingFileHandler(log_filename, maxBytes=20, backupCount=5)
+#)
 
 TIME_ZONE = "Europe/Vienna"
 

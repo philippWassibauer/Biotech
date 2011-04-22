@@ -5,6 +5,7 @@ from os.path import abspath, dirname, join
 
 from django.conf import settings
 from django.core.management import setup_environ, execute_from_command_line
+import os
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.abspath(os.path.dirname(__file__)), os.pardir, os.pardir)))
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.abspath(os.path.dirname(__file__)), os.pardir)))
