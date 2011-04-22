@@ -1,0 +1,20 @@
+[
+    {
+        "pk": 1, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "phil", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": true, 
+            "is_staff": true, 
+            "last_login": "2011-04-21 20:28:52", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$5a0c9$92fcec6fced6b5b3cedda6fc0b9883c26563397e", 
+            "email": "sdf@sdf.com", 
+            "date_joined": "2011-04-21 01:15:32"
+        }
+    }
+]
