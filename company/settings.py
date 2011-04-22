@@ -191,6 +191,7 @@ AUTH_PROFILE_MODULE = "profiles.Profile"
 MIDDLEWARE_CLASSES = [
     #"django.middleware.cache.UpdateCacheMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "cms.middleware.multilingual.MultilingualURLMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.middleware.common.CommonMiddleware",
