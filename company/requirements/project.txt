@@ -29,3 +29,6 @@ django-memcached==0.1.2
 
 gondor==1.0b1.post1
 psycopg2==2.4
+
+
+-e svn+http://django-rosetta.googlecode.com/svn/trunk/#egg=rosetta

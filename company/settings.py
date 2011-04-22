@@ -70,7 +70,7 @@ gettext = lambda s: s
 
 TIME_ZONE = "Europe/Vienna"
 
-LANGUAGE_CODE = "en"
+LANGUAGE_CODE = "de"
 LANGUAGES = (
     ("de", gettext("German")),
     ("en", gettext("English")),
@@ -275,7 +275,8 @@ INSTALLED_APPS = [
     "easy_thumbnails",
     "gunicorn",
     #"notification",
-
+    
+    "rosetta",
 ]
 
 DJANGO_MEMCACHED_REQUIRE_STAFF = True
