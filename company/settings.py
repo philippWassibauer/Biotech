@@ -60,7 +60,7 @@ gettext = lambda s: s
 
 import logging
 import logging.handlers
-log_filename = os.path.join(PROJECT_ROOT, "biotech.log")
+log_filename = os.path.join(PROJECT_ROOT, "log", "biotech.log")
 logging.basicConfig(
     level = logging.ERROR,
     format = "%(asctime)s %(levelname)s: %(filename)s %(lineno)d %(message)s",
