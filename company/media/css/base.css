@@ -15,17 +15,51 @@ body{
 
 .header .slogan{
     position: absolute;
-    right: 20px;
+    right: 10px;
     top: 20px;
     font-size: 16px;
     color: #666;
+}
+
+.image-header{
+    widht: 900px;
+    height: 225px;
+    position: relative;
+}
+
+.image-header img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+.image-header h1{
+    position: absolute;
+    left: 388px;
+    top: 60px;
+    font-size: 38px;
+    margin: 0px;
+    z-index: 3;
+}
+
+.image-header p{
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 18px;
+    position: absolute;
+    top: 115px;
+    left: 388px;
+    color: #5f5f5f;
+    margin: 0px;
+    z-index: 3;
 }
 
 .body_wrapper{
     position: relative;
     width: 900px;
     margin: 20px auto;
-    min-height: 750px;
+    min-height: 1040px;
 }
 
 .body_wrapper .shadow-left{
@@ -79,12 +113,12 @@ h1, h2, h3, h4, h5{
     position:absolute;
 }
 
-.main-menu ul{
+.main-menu > ul{
     margin: 0px;
-    padding: 0px 10px;
+    padding: 0px 0px;
 }
 
-.main-menu ul li{
+.main-menu > ul > li{
     list-style: none;
     display: inline-block;
     color: #FFF;
@@ -94,54 +128,61 @@ h1, h2, h3, h4, h5{
     line-height: 16px;
 }
 
-.main-menu ul li.selected{
-    
+.main-menu > ul > li.ancestor,
+.main-menu > ul > li.selected{
+    -webkit-box-shadow: 0px 0px 12px #12260f inset;
+    -moz-box-shadow: 0px 0px 12px #12260f inset;
+    box-shadow: 0px 0px 12px #12260f inset;
 }
 
-.main-menu ul li a,
-.main-menu ul li a:visited{
+.main-menu > ul > li a,
+.main-menu > ul > li a:visited{
     text-decoration: none;
     font-size: 16px;
     color: #FFF;
 }
 
-.main-menu ul li ul{
+.main-menu > ul > li ul{
     position: absolute;
     height: 36px;
     margin: 0px;
-    padding: 0px 10px;
+    padding: 0px 0px;
     bottom: -42px;
     width: 300px;
     right: 0px;
     text-align: right;
 }
 
-.main-menu ul li ul li{
+.main-menu > ul > li ul li{
     list-style: none;
     display: inline-block;
     color: #999;
-    padding: 3px 10px;
+    padding: 3px 7px 3px 10px;
     text-decoration: none;
-    height: 11px;
-    line-height: 11px;
-    border-right: #AAA 1px solid;
+    height: 12px;
+    line-height: 12px;
+    border-left: #AAA 1px solid;
 }
 
 
-.main-menu ul li ul li a:visited,
-.main-menu ul li ul li a{
+.main-menu > ul > li ul li a:visited,
+.main-menu > ul > li ul li a{
     text-decoration:none;
     font-size: 11px;
     color: #999;
 }
 
-.main-menu ul li ul li.selected{
-    
+.main-menu > ul > li ul li.selected{
+    font-weight:bold;
 }
 
-.main-menu ul li ul li.selected a:visited,
-.main-menu ul li ul li.selected a{
+.main-menu > ul > li ul li.selected a:visited,
+.main-menu > ul > li ul li.selected a{
     color: #529243;
+}
+
+.main-menu > ul > li ul :first-child{
+    border-left: #AAA 0px solid !important;
 }
 
 .cms-main-column{
@@ -153,7 +194,97 @@ h1, h2, h3, h4, h5{
 .cms-right-column{
     width: 230px;
     position: absolute;
-    right: -13px;
+    right: -15px;
+    margin-top: 23px;
+    height: 650px;
+    border-left: 1px solid #CCC;
+}
+
+
+.cpm-online{
+    display: block;
+    width: 229px;
+    height: 166px;
+    background-image: url(../img/box-cpm-online.png);
+    margin-bottom: 10px;
+    position: relative;
+    left: -1px;
+}
+
+.feedback-form{
+    background-image: url(../img/box-schnellhilfe.png);
+    background-repeat: no-repeat;
+    display: block;
+    width: 185px;
+    height: 247px;
+    margin-bottom: 10px;
+    position: relative;
+    left: -1px;
+    padding: 15px 22px;
+}
+
+.feedback-form h3{
+    position: relative;
+    margin: 0px 0 17px 28px;
+    color: #222;
+    height: 16px;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.feedback-form p{
+    margin: 6px 0px 8px 0px;
+    color: #222;
+    font-size: 11px;
+}
+
+.feedback-form input{
+    border: 1px solid #CCC;
+    padding: 5px;
+    width: 170px;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.feedback-form span{
+    color: #222;
+    font-size: 11px;
+}
+
+.feedback-form button{
+    float: right;
+}
+
+.schnellhilfe{
+    background-image: url(../img/nothotline-rechts.png);
+    display: block;
+    width: 229px;
+    height: 127px;
+    margin-bottom: 10px;
+    color: #FFF;
+    position: relative;
+    padding: 1px;
+    background-repeat: no-repeat;
+    position: relative;
+    left: -1px;
+}
+
+.schnellhilfe h3{
+    position: relative;
+    margin: 20px 0 18px 50px;
+    color: #FFF;
+    height: 16px;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.schnellhilfe p{
+    margin: 6px 0 6px 20px;
+}
+
+.schnellhilfe a:visited,
+.schnellhilfe a{
+    color: #FFF;
 }
 
 
@@ -165,6 +296,12 @@ h1, h2, h3, h4, h5{
     z-index: 999;
     background-image: url(../img/footer-bg-300px.png);
     background-repeat: repeat-x;
+    color: #FFF;
+}
+
+.footer a,
+.footer a:visited{
+    color: #FFF;
 }
 
 .footer .content_area{
@@ -174,22 +311,50 @@ h1, h2, h3, h4, h5{
     margin: 0px auto;
 }
 
+.footer .hotline-header{
+    position: absolute;
+    font-size: 16px;
+    left: 30px;
+    top: 26px;
+}
 
 .footer .hotline{
     position: absolute;
-    top: 20px;
+    top: 51px;
     left: 30px;
+    font-size: 14px;
+    color: #EEE;
 }
 
 .footer .copyright{
     position: absolute;
-    bottom: 20px;
-    right: 10px;
+    bottom: 15px;
+    right: 30px;
+    font-size: 10px;
 }
 
 .footer .legal{
     position: absolute;
-    top: 20px;
-    right: 10px;
+    top: 25px;
+    right: 27px;
+    font-size: 12px;
+    text-align: right;
+}
+
+.footer .legal ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+.footer .legal ul li{
+    list-style: none;
+    border-left: 1px solid #DDD;
+    display: inline-block;
+    padding: 0px 5px 0px 9px;
+    margin: 0px;
+}
+
+.footer .legal ul :first-child{
+    border-left: 0px solid #DDD;
 }
 

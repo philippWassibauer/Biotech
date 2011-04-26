@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load cms_tags menu_tags %}
+{% load cms_tags menu_tags i18n %}
 
 {% block base_body %}
     <div class="image-header">
@@ -15,6 +15,30 @@
     </div>
     <div class="cms-right-column">
         {% block right_column %}
+            <a class="cpm-online" href="http://cpm.biotech.at">
+                <span></span>
+            </a>
+
+            <div class="schnellhilfe">
+                <h3>{% trans "24h Nothotline" %}</h3>
+                <p>+43 (0)662 433 118</p>
+                <p><a href="mailto:office@biotech.at">office@biotech.at</a></p>
+            </div>
+
+            <form class="feedback-form">
+                <h3>{% trans "Schnellhilfe" %}</h3>
+                <p>{% trans "Überlassen Sie uns Ihre Daten und wir rufen Sie gerne zurück" %}.</p>
+                <input type="text" name="name" title="{% trans 'Vor- & Nachname' %}" />
+                <input type="text" name="email" title="{% trans 'E-Mail' %}" />
+                <input type="text" name="tel" title="{% trans 'Telefon' %}" />
+
+                <span>{% trans "Worum geht es?" %}</span>
+                <input type="text" name="reason" title="{% trans 'z.B.: Rattenbefall' %}"/>
+                <div class="form_block">
+                    <button type="submit" class="green-button">{% trans "Senden"|upper %}</button>
+                    <div style="clear:both;"></div>
+                </div>
+            </form>
             {% placeholder "right_column" %}
         {% endblock %}
         &nbsp;

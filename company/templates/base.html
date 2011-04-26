@@ -80,9 +80,10 @@
 
         <div class="footer">
             <div class="content_area">
+                <div class="hotline-header">{% trans "Hotline" %}:</div>
                 <div class="hotline">+43 (0)662 433 118</div>
-                <div class="legal">{% show_menu_below_id "legal" %}</div>
-                <div class="copyright">{% trans "Design by Inspiranto" %}</div>
+                <div class="legal"><ul>{% show_menu_below_id "legal" %}</ul></div>
+                <div class="copyright"><a href="http://inspiranto.com">{% trans "Design by Inspiranto" %}</a></div>
             </div>
         </div>
 
@@ -92,9 +93,19 @@
             <script src="{{ STATIC_URL }}pinax/js/base.js" type="text/javascript"></script>
             <script src="{{ STATIC_URL }}uni_form/uni-form.jquery.js" type="text/javascript"></script>
             <script src="{{ STATIC_URL }}pinax/js/facebox.js" type="text/javascript"></script>
+            <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.labelify.js"></script>
+
             <!--[if IE]>
                  <script src="{{ STATIC_URL }}pie-1b4/PIE.js" type="text/javascript"></script>
             <![endif]-->
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                  $(":text").labelify({labelledClass:"labeledInput"});
+                  $(":password").labelify();
+                  $("textarea").labelify();
+            });
+        </script>
 
             {% block js_block %}
             {% endblock %}
