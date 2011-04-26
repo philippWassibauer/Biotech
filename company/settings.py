@@ -205,8 +205,6 @@ MIDDLEWARE_CLASSES = [
     #"pinax.middleware.security.HideSensistiveFieldsMiddleware",
     #"debug_toolbar.middleware.DebugToolbarMiddleware",
     #'pagination.middleware.PaginationMiddleware',
-
-
     #"django.middleware.cache.FetchFromCacheMiddleware",
     #"django.middleware.gzip.GZipMiddleware",
 ]

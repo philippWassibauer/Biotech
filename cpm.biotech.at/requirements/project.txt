@@ -21,3 +21,9 @@ boto==2.0b3
 
 python-memcached==1.47
 django-memcached==0.1.2
+
+django-tastypie
+
+# pdf for api
+rst2pdf
+sphinx-http-domain

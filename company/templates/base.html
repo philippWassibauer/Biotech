@@ -51,6 +51,9 @@
 
     <body class="{% block body_class %}{% endblock %}">
         <div class="body_wrapper">
+            <div class="shadow-left"></div>
+            <div class="shadow-right"></div>
+        
             {% block body_outer %}
                 <div id="body">
                     {% block header %}
@@ -62,12 +65,8 @@
                             <div class="slogan">{% trans "Kontrolle ist besser" %}</div>
 
                             <div class="main-menu">
-                                <ul>{% show_menu %}</ul>
-                            </div>
-                            <div class="submenu">
-                                <ul>
-                                    {% show_sub_menu 1 %}
-                                </ul>
+                                <img class="zapfen" src="{{ STATIC_URL }}img/navi-zapfen-links.png" />
+                                <ul>{% show_menu 0 100 0 100 %}</ul>
                             </div>
                         </div>
                     {% endblock %}
