@@ -112,6 +112,9 @@ CMS_MEDIA_URL  = STATIC_URL + "cms/"
 #CMS_MODERATOR = False #keep this off for now, causes bug that hides all content in non edit modus
 #CMS_SEO_FIELDS = True
 #CMS_FLAT_URLS = True
+CMS_REDIRECTS = True
+CMS_HIDE_UNTRANSLATED = False
+
 CMS_TEMPLATES = (
         ("cms_base.html", gettext("default")),
 )
