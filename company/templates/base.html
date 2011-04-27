@@ -62,7 +62,7 @@
                                 <img src="{{ STATIC_URL }}img/logo.png" alt="BIO-TECH" />
                             </a>
 
-                            <div class="slogan">{% trans "Kontrolle ist besser" %}</div>
+                            <div class="slogan">{% trans "Kontrolle ist besser" %}.</div>
 
                             <div class="main-menu">
                                 <img class="zapfen" src="{{ STATIC_URL }}img/navi-zapfen-links.png" />
@@ -80,10 +80,14 @@
 
         <div class="footer">
             <div class="content_area">
-                <div class="hotline-header">{% trans "Hotline" %}:</div>
-                <div class="hotline">+43 (0)662 433 118</div>
-                <div class="legal"><ul>{% show_menu_below_id "legal" %}</ul></div>
-                <div class="copyright"><a href="http://inspiranto.com">{% trans "© design by Inspiranto" %}</a></div>
+                <div class="hotline-header">{% trans "Hotline" %}: +43 (0)662 433 118</div>
+                <div class="legal">
+                    <ul>
+                        {% show_menu_below_id "legal" %}
+                        <li><span class="copyright"><a href="http://inspiranto.com">{% trans "© design by Inspiranto" %}</a></span></li>
+                    </ul> 
+                </div>
+
             </div>
         </div>
 

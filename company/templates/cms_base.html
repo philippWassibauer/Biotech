@@ -25,7 +25,8 @@
                 <p><a href="mailto:office@biotech.at">office@biotech.at</a></p>
             </div>
 
-            <form class="feedback-form">
+            <form class="feedback-form" action="{% url support_request %}" method="POST">
+                {% csrf_token %}
                 <h3>{% trans "Schnellhilfe" %}</h3>
                 <p>{% trans "Überlassen Sie uns Ihre Daten und wir rufen Sie gerne zurück" %}.</p>
                 <input type="text" name="name" title="{% trans 'Vor- & Nachname' %}" />

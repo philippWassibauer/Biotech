@@ -279,6 +279,7 @@ INSTALLED_APPS = [
     #"notification",
     
     "rosetta",
+    'biotech',
 ]
 
 DJANGO_MEMCACHED_REQUIRE_STAFF = True

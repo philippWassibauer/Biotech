@@ -6,9 +6,12 @@ from django.contrib.auth.models import User
 admin.autodiscover()
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls.static import static
+from biotech.views import help_request
+
 
 urlpatterns = patterns("",
     (r"^admin/", include(admin.site.urls)),
+    url(r"^help_request/$", help_request, name="support_request"),
     url(r'^', include('cms.urls')),
 )
 

@@ -61,7 +61,7 @@ body{
     position: relative;
     width: 900px;
     margin: 20px auto;
-    min-height: 1040px;
+    min-height: 1100px;
 }
 
 .body_wrapper .shadow-left{
@@ -95,6 +95,7 @@ h1 {
 	color: #008F47;
     font-weight: 600;
     letter-spacing: -1px;
+    line-height: 28px;
 }
 
 h2 {
@@ -102,12 +103,12 @@ h2 {
 	color:#5F5F5F !important;
 	font-size:15px;
 	font-style: italic;
-	line-height: 0.2em;
 	font-weight:100;
-    padding-bottom: 14px;
+    padding-bottom: 12px;
     border-bottom: 1px solid #5F5F5F;
     font-weight: 300;
     letter-spacing: 0px;
+    line-height: 15px;
 }
 
 h3 {
@@ -116,6 +117,7 @@ h3 {
 	font-weight: 600;
 	font-size:15px;
     margin: 17px 0 8px 0;
+    line-height: 22px;
 }
 
 
@@ -126,11 +128,14 @@ a, a:visited{
 .logo{
     position: absolute;
     left: 3px;
-    top: 20px;
+    top: 15px;
     width: 107px;
     height: 76px;
 }
 
+img{
+    border: 0px solid #FFF;
+}
 
 .main-menu{
     background-image: url(../img/navi-bg.png);
@@ -234,8 +239,25 @@ a, a:visited{
     margin-top: 23px;
     height: 650px;
     border-left: 1px solid #CCC;
+    line-height: 15px;
 }
 
+.green-button{
+    background-image: url(../img/buttons.png);
+    width: 55px;
+    height: 23px;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #FFF;
+    border: 0px solid #FFF;
+    font-size: 11px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.green-button:hover{
+    background-position: 0 -25px;
+}
 
 .cpm-online{
     display: block;
@@ -327,7 +349,7 @@ a, a:visited{
 .footer{
     background-color: #119644;
     width: 100%;
-    height: 85px;
+    height: 55px;
     position: relative;
     z-index: 999;
     background-image: url(../img/footer-bg-300px.png);
@@ -344,7 +366,7 @@ a, a:visited{
 .footer .content_area{
     position: relative;
     width: 950px;
-    height: 85px;
+    height: 55px;
     margin: 0px auto;
 }
 
@@ -352,30 +374,20 @@ a, a:visited{
     position: absolute;
     font-size: 16px;
     left: 30px;
-    top: 20px;
-}
-
-.footer .hotline{
-    position: absolute;
-    top: 46px;
-    left: 30px;
-    font-size: 14px;
-    color: #EEE;
+    top: 17px;
 }
 
 .footer .copyright{
-    position: absolute;
-    bottom: 15px;
-    right: 30px;
     font-size: 10px;
 }
 
 .footer .legal{
     position: absolute;
-    top: 25px;
+    top: 18px;
     right: 27px;
     font-size: 12px;
     text-align: right;
+    width: 300px;
 }
 
 .footer .legal ul{
@@ -394,4 +406,3 @@ a, a:visited{
 .footer .legal ul :first-child{
     border-left: 0px solid #DDD;
 }
-
