@@ -96,6 +96,7 @@ h1 {
     font-weight: 600;
     letter-spacing: -1px;
     line-height: 28px;
+    margin-bottom: 8px;
 }
 
 h2 {
@@ -109,6 +110,7 @@ h2 {
     font-weight: 300;
     letter-spacing: 0px;
     line-height: 15px;
+    margin-top: 8px;
 }
 
 h3 {
@@ -118,6 +120,15 @@ h3 {
 	font-size:15px;
     margin: 17px 0 8px 0;
     line-height: 22px;
+}
+
+h4 {
+	font-family:Verdana, Geneva, sans-serif;
+	color: #008F47;
+	font-weight: 600;
+	font-size:18px;
+    margin: 17px 0 8px 0;
+    line-height: 24px;
 }
 
 
