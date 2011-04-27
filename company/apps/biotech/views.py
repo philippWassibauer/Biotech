@@ -19,9 +19,7 @@ def help_request(request, template_name="support_confirm.html"):
     tel = request.POST.get("tel", "")
     reason = request.POST.get("reason", "")
 
-    from django.core.mail import EmailMessage
-    email = EmailMessage('Schnellhilfe-Anfrage', message%(name, email, tel, reason),
-                         to=['office@biotech.at', 'phil@maptales.com'])
-    email.send()
+    send_mail('Schnellhilfe-Anfrage', message%(name, email, tel, reason), settings.DEFAULT_FROM_EMAIL,
+            ['office@biotech.at', 'phil@maptales.com'], fail_silently=False)
 
     return render_to_response(template_name, {}, RequestContext(request))
