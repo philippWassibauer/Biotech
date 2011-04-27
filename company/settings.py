@@ -56,7 +56,14 @@ TEST_RUNNER = "django_nose.run_tests"
 
 gettext = lambda s: s
 
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'biotechsender@gmail.com'
+EMAIL_HOST_PASSWORD = 'bio*tech'
+EMAIL_PORT = 587
 
+DEFAULT_FROM_EMAIL = "biotechsender@gmail.com"
+SERVER_EMAIL = DEFAULT_FROM_EMAIL
 
 #import logging
 #import logging.handlers
@@ -102,16 +109,6 @@ STATIC_URL = "/site_media/static/"
 
 CMS_MEDIA_ROOT = os.path.join(STATIC_ROOT, "cms/")
 CMS_MEDIA_URL  = STATIC_URL + "cms/"
-#CMS_MEDIA_PATH = "cms/"
-#CMS_MEDIA_ROOT = MEDIA_ROOT + CMS_MEDIA_PATH
-#CMS_LANGUAGES = LANGUAGES
-#CMS_DBGETTEXT = False
-#CMS_SOFTROOT = True
-#CMS_MEDIA_URL = STATIC_URL + "cms/"
-#CMS_PERMISSION = False
-#CMS_MODERATOR = False #keep this off for now, causes bug that hides all content in non edit modus
-#CMS_SEO_FIELDS = True
-#CMS_FLAT_URLS = True
 CMS_REDIRECTS = True
 CMS_HIDE_UNTRANSLATED = False
 
@@ -309,5 +306,5 @@ except ImportError:
     pass
 
 
-if DEBUG:
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#if DEBUG:
+#    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
