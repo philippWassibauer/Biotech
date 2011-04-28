@@ -239,8 +239,12 @@ img{
 
 .cms-main-column{
     width: 585px;
-    margin: 3px 40px;
+    margin: 3px 50px;
     float: left;
+}
+
+.cms-main-column p{
+	margin-top:20px;
 }
 
 .cms-right-column{
@@ -383,9 +387,9 @@ img{
 
 .footer .hotline-header{
     position: absolute;
-    font-size: 16px;
+    font-size: 14px;
     left: 30px;
-    top: 17px;
+    top: 19px;
 }
 
 .footer .copyright{
@@ -402,7 +406,7 @@ img{
 }
 
 .footer .legal ul{
-    margin: 0px;
+    margin-top: 2px;
     padding: 0px;
 }
 
