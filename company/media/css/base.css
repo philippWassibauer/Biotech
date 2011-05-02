@@ -158,6 +158,7 @@ img{
     float:right;
     height: 36px;
     position: relative;
+    min-width:344px;
 }
 
 .main-menu .zapfen{
@@ -254,7 +255,7 @@ img{
     width: 230px;
     position: absolute;
     right: -15px;
-    margin-top: 23px;
+    top: 23px;
     height: 650px;
     border-left: 1px solid #CCC;
     line-height: 15px;
