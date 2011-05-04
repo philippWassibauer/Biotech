@@ -155,10 +155,10 @@ img{
     background-image: url(../img/navi-bg.png);
     background-repeat: repeat-x;
     margin-top: 55px;
-    float:right;
+    float: right;
     height: 36px;
     position: relative;
-    min-width:344px;
+    min-width: 280px;
 }
 
 .main-menu .zapfen{
@@ -204,7 +204,7 @@ img{
     margin: 0px;
     padding: 0px 0px;
     bottom: -42px;
-    width: 300px;
+    width: 600px;
     right: 0px;
     text-align: right;
 }
@@ -424,4 +424,15 @@ img{
 
 .footer .legal ul :first-child{
     border-left: 0px solid #DDD;
+}
+
+
+.left {
+    float: left;
+    margin: 0 30px 10px 0;
+}
+
+.right {
+    float: right;
+    margin: 0 0 10px 30px;
 }
