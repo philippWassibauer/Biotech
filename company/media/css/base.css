@@ -436,3 +436,60 @@ img{
     float: right;
     margin: 0 0 10px 30px;
 }
+
+.grey-box{
+    background-image: url(../img/boxen_bg.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border: 1px solid #EFEFEF;
+    min-height: 160px;
+    padding: 20px;
+}
+
+.grey-box h2{
+    border-bottom: 0px solid #FFF;
+}
+
+.grey-box h1{
+    margin-top: 0px;
+}
+
+.button-box{
+    margin-top: 18px;
+    
+}
+
+.button-box .big-green-button{
+    width: 230px;
+}
+
+.grey-box .right-corner-image{
+    position: absolute;
+    right: 10px;
+    bottom: 0px;
+}
+
+.big-green-button{
+    background-image: url(../img/green-button.png);
+    background-repeat: repeat-x;
+    background-position: top;
+    padding: 5px 10px 8px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #FFF;
+    background-color: #028145;
+    border: 1px solid #028145;
+    font-size: 16px;
+    line-height: 16px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px 3px 0;
+}
+
