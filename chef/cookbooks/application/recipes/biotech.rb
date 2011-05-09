@@ -1,5 +1,13 @@
 app = node.run_state[:current_app]
 
+script "Update System" do
+    interpreter "bash"
+    user "root"
+    group "root"
+    code <<-EOH
+       aptitude upgrade -y
+    EOH
+end
 
 directory "/home/ubuntu/.virtualenvs" do
     owner "ubuntu"
