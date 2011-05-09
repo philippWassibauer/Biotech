@@ -3,6 +3,7 @@ Pinax==0.9a1.dev12
 
 Django==1.3
 django-uni-form==0.7.0
+PIL
 werkzeug
 Fabric==0.9.1
 nose==0.11.4
