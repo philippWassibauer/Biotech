@@ -14,25 +14,18 @@ def install_chef():
     sudo('apt-get update', pty=True)
     sudo('apt-get install -y git-core rubygems ruby ruby-dev subversion', pty=True)
     sudo('gem install chef --no-ri --no-rdoc', pty=True)
-    sudo('mkdir %s'%chef_solo_path)
+    sudo('mkdir -p %s'%chef_solo_path)
     sudo('chown ubuntu:ubuntu %s'%chef_solo_path)
     sudo('gem install haml') # installs sass
     sudo('apt-get install libopenssl-ruby')
     sudo('apt-get install nmap')
 
 
-def install_python_dependencies():
-    sudo('apt-get install python-setuptools')
-    sudo('easy_install pip')
-    sudo('pip install virtualenvwrapper')
-    sudo('echo export WORKON_HOME=~/.virtualenvs >> ~/.profile')
-    sudo('echo mkdir -p \$WORKON_HOME >> ~/.profile')
-    sudo('echo source /usr/local/bin/virtualenvwrapper.sh >> ~/.profile')
-
 def sync_config():
     local('rsync -av  -e "ssh -v -v -v -i %s" . %s@%s:%s' % \
                                     (env.key_filename, env.user, env.hosts[0],
                                     chef_solo_path))
+
 
 def update():
     sync_config()

@@ -13,3 +13,7 @@ cd ~/.virtualenvs/biotech/
 
 alias chk='cd /home/ubuntu/.virtualenvs/biotech/checkouts/biotech.at'
 alias run='cd /home/ubuntu/.virtualenvs/biotech/run'
+
+export WORKON_HOME=~/.virtualenvs
+mkdir -p $WORKON_HOME
+source /usr/local/bin/virtualenvwrapper.sh
