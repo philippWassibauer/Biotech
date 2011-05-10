@@ -28,7 +28,7 @@
             <form class="feedback-form" action="{% url support_request %}" method="POST">
                 {% csrf_token %}
                 <h3>{% trans "Schnellhilfe" %}</h3>
-                <p>{% trans "Überlassen Sie uns Ihre Daten und wir rufen Sie gerne zurück" %}.</p>
+                <p>{% trans "Hinterlassen Sie uns Ihre Daten und wir rufen Sie gerne zurück" %}.</p>
                 <input type="text" name="name" title="{% trans 'Vor- & Nachname' %}" />
                 <input type="text" name="email" title="{% trans 'E-Mail' %}" />
                 <input type="text" name="tel" title="{% trans 'Telefon' %}" />
