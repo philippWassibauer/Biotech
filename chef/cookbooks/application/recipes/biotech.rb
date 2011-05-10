@@ -9,25 +9,25 @@ script "Update System" do
     EOH
 end
 
-directory "/home/ubuntu/.virtualenvs" do
+directory "#{node[:virtual_env_path]}" do
     owner "ubuntu"
     group "ubuntu"
     mode 0775
 end
 
-virtualenv "/home/ubuntu/.virtualenvs/biotech" do
+virtualenv "#{node[:virtual_env_path]}/biotech" do
     owner "ubuntu"
     group "ubuntu"
     mode 0775
 end
 
-directory "/home/ubuntu/.virtualenvs/biotech/checkouts" do
+directory "#{node[:virtual_env_path]}/biotech/checkouts" do
     owner "ubuntu"
     group "ubuntu"
     mode 0775
 end
 
-git "/home/ubuntu/.virtualenvs/biotech/checkouts/biotech.at" do
+git "#{node[:virtual_env_path]}/biotech/checkouts/biotech.at" do
     repository "git://github.com/philippWassibauer/Biotech.git"
     reference "HEAD"
     user "ubuntu"
@@ -40,7 +40,7 @@ script "Install Requirements" do
     user "ubuntu"
     group "ubuntu"
     code <<-EOH
-     /home/ubuntu/.virtualenvs/biotech/bin/pip install -r /home/ubuntu/.virtualenvs/biotech/checkouts/biotech.at/company/requirements/project.txt
+     #{node[:virtual_env_path]}/biotech/bin/pip install -r #{node[:virtual_env_path]}/biotech/checkouts/biotech.at/company/requirements/project.txt
     EOH
 end
 
