@@ -1,0 +1,19 @@
+. .bashrc
+
+export PIP_DOWNLOAD_CACHE=/tmp/pip
+export DJANGO_SETTINGS_MODULE=settings
+export PYTHONPATH=$PYTHONPATH:~/.virtualenvs/biotech/checkouts/biotech.at
+export PYTHONPATH=$PYTHONPATH:~/.virtualenvs/biotech/checkouts/biotech.at/company
+export EDITOR=vim
+
+. .virtualenvs/biotech/bin/activate
+
+cd ~/.virtualenvs/biotech/
+
+
+alias chk='cd /home/ubuntu/.virtualenvs/biotech/checkouts/biotech.at'
+alias run='cd /home/ubuntu/.virtualenvs/biotech/run'
+
+export WORKON_HOME=~/.virtualenvs
+mkdir -p $WORKON_HOME
+source /usr/local/bin/virtualenvwrapper.sh

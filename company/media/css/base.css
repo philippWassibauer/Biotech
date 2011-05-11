@@ -23,9 +23,10 @@ body{
 }
 
 .image-header{
-    widht: 900px;
+    width: 900px;
     height: 225px;
     position: relative;
+    overflow: hidden;
 }
 
 .image-header img{
@@ -42,6 +43,7 @@ body{
     font-size: 38px;
     margin: 0px;
     z-index: 3;
+    width: 505px;
 }
 
 .image-header p{
@@ -54,6 +56,7 @@ body{
     color: #5f5f5f;
     margin: 0px;
     z-index: 3;
+    width: 505px;
 }
 
 
@@ -152,9 +155,10 @@ img{
     background-image: url(../img/navi-bg.png);
     background-repeat: repeat-x;
     margin-top: 55px;
-    float:right;
+    float: right;
     height: 36px;
     position: relative;
+    min-width: 280px;
 }
 
 .main-menu .zapfen{
@@ -200,7 +204,7 @@ img{
     margin: 0px;
     padding: 0px 0px;
     bottom: -42px;
-    width: 300px;
+    width: 600px;
     right: 0px;
     text-align: right;
 }
@@ -251,7 +255,7 @@ img{
     width: 230px;
     position: absolute;
     right: -15px;
-    margin-top: 23px;
+    top: 23px;
     height: 650px;
     border-left: 1px solid #CCC;
     line-height: 15px;
@@ -421,3 +425,71 @@ img{
 .footer .legal ul :first-child{
     border-left: 0px solid #DDD;
 }
+
+
+.left {
+    float: left;
+    margin: 0 30px 10px 0;
+}
+
+.right {
+    float: right;
+    margin: 0 0 10px 30px;
+}
+
+.grey-box{
+    background-image: url(../img/boxen_bg.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border: 1px solid #EFEFEF;
+    min-height: 160px;
+    padding: 20px;
+}
+
+.grey-box h2{
+    border-bottom: 0px solid #FFF;
+}
+
+.grey-box h1{
+    margin-top: 0px;
+}
+
+.button-box{
+    margin-top: 18px;
+    
+}
+
+.button-box .big-green-button{
+    width: 230px;
+}
+
+.grey-box .right-corner-image{
+    position: absolute;
+    right: 10px;
+    bottom: 0px;
+}
+
+.big-green-button{
+    background-image: url(../img/green-button.png);
+    background-repeat: repeat-x;
+    background-position: top;
+    padding: 5px 10px 8px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #FFF;
+    background-color: #028145;
+    border: 1px solid #028145;
+    font-size: 16px;
+    line-height: 16px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px 3px 0;
+}
+
