@@ -9,5 +9,6 @@
   "pip_python_packages": {"virtualenv": "1.5.1", "mercurial": "1.7"},
   "mysql": {
       "server_root_password": "bio*tech.#."
-  }
+  },
+  "virtual_env_path": "/home/ubuntu/.virtualenvs"
 }

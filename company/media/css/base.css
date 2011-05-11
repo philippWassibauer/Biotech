@@ -12,6 +12,7 @@ body{
 .header{
     position: relative;
     height: 100px;
+    z-index: 99;
 }
 
 .header .slogan{
@@ -142,7 +143,7 @@ a, a:visited{
 .logo{
     position: absolute;
     left: 3px;
-    top: 15px;
+    top: 5px;
     width: 107px;
     height: 76px;
 }
@@ -154,7 +155,7 @@ img{
 .main-menu{
     background-image: url(../img/navi-bg.png);
     background-repeat: repeat-x;
-    margin-top: 55px;
+    margin-top: 40px;
     float: right;
     height: 36px;
     position: relative;

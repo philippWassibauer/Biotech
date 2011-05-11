@@ -44,6 +44,16 @@ script "Install Requirements" do
     EOH
 end
 
+
+# Project Configuration
+cookbook_file "#{node[:virtual_env_path]}/biotech/checkouts/biotech.at/company/local_settings.py" do
+    source "company_local_settings.py"
+    owner "ubuntu"
+    group "ubuntu"
+    mode 0644
+end
+
+
 # Gunicorn setup
 cookbook_file "/etc/init/biotech-gunicorn.conf" do
     source "gunicorn.conf"

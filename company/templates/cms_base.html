@@ -26,23 +26,13 @@
                     <p><a href="mailto:office@biotech.at">office@biotech.at</a></p>
                 </div>
 
-<<<<<<< HEAD
-            <form class="feedback-form" action="{% url support_request %}" method="POST">
-                {% csrf_token %}
-                <h3>{% trans "Schnellhilfe" %}</h3>
-                <p>{% trans "Hinterlassen Sie uns Ihre Daten und wir rufen Sie gerne zurück" %}.</p>
-                <input type="text" name="name" title="{% trans 'Vor- & Nachname' %}" />
-                <input type="text" name="email" title="{% trans 'E-Mail' %}" />
-                <input type="text" name="tel" title="{% trans 'Telefon' %}" />
-=======
                 <form class="feedback-form" action="{% url support_request %}" method="POST">
                     {% csrf_token %}
                     <h3>{% trans "Schnellhilfe" %}</h3>
-                    <p>{% trans "Überlassen Sie uns Ihre Daten und wir rufen Sie gerne zurück" %}.</p>
+                    <p>{% trans "Hinterlassen Sie uns Ihre Daten und wir rufen Sie gerne zurück" %}.</p>
                     <input type="text" name="name" title="{% trans 'Vor- & Nachname' %}" />
                     <input type="text" name="email" title="{% trans 'E-Mail' %}" />
                     <input type="text" name="tel" title="{% trans 'Telefon' %}" />
->>>>>>> c9f80bcf3a409a963de2d7515d2de07aa3aaa0f7
 
                     <span>{% trans "Worum geht es?" %}</span>
                     <input type="text" name="reason" title="{% trans 'z.B.: Rattenbefall' %}"/>
