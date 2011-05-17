@@ -1,4 +1,5 @@
 {
+  "user": "ubuntu",
   "run_list": [ "application::default",
                 "application::python",
                 "application::biotech",
