@@ -1,7 +1,6 @@
 from __future__ import with_statement
 from fabric.api import *
 from fabric.contrib.console import confirm
-import settings as settings
 import os
 env.user = 'ubuntu'
 env.hosts = ['46.137.95.92']
@@ -13,16 +12,19 @@ env.key_filename = "biotech.pem"
 server_path = "/home/ubuntu/.virtualenvs/biotech/checkouts/biotech.at/biotech/"
 env.chef_executable = '/usr/bin/chef-solo'
 
-def initalize():
+def initialize():
     # install dependencies
     (sysname, nodename, release, version, machine) = os.uname()
     if sysname == "Darwin":
+        local('sudo easy_install pip')
+        local('sudo easy_install Mercurial')
         local('pip install -U pip')
         local('pip install virtualenv')
         local('pip install virtualenvwrapper')
-        local('echo export WORKON_HOME=~/.virtualenvs >> ~/.bash_profile')
-        local('echo mkdir -p \$WORKON_HOME >> ~/.bash_profile')
-        local('echo source /usr/local/bin/virtualenvwrapper.sh >> ~/.bash_profile')
+        local('echo export WORKON_HOME=~/.virtualenvs >> ~/.profile')
+        local('echo mkdir -p \$WORKON_HOME >> ~/.profile')
+        local('echo source /usr/local/bin/virtualenvwrapper.sh >> ~/.profile')
+        local('source ~/.profile')
         local('mkvirtualenv --no-site-packages biotech')
     else:
         run('apt-get install libxml2-dev')

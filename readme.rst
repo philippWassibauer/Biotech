@@ -8,7 +8,7 @@ Clone or copy this project to your computer.
 ----------
  Install on MacOsX
 ----------
-
+ * Install XCode (you can find it on a MacOsX Installation CD in the Optional Install Folder, or download it at connect.apple.com)
  * Install Git and your Github Keys (http://help.github.com/key-setup-redirect/)
    I never use a passphrase, since it is quite annoying (personal opinion)
  * Install Setuptools
