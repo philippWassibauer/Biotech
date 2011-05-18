@@ -18,7 +18,6 @@ def initialize():
     if sysname == "Darwin":
         local('sudo easy_install pip')
         local('sudo easy_install Mercurial')
-        local('pip install -U pip')
         local('pip install virtualenv')
         local('pip install virtualenvwrapper')
         local('echo export WORKON_HOME=~/.virtualenvs >> ~/.profile')
