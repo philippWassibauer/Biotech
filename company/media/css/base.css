@@ -11,16 +11,11 @@ body{
 
 .header{
     position: relative;
-    height: 200px;
+    height: 175px;
     z-index: 99;
     background-image: url(../img/header-verlauf.png);
 }
 
-.header .slogan{
-    position: absolute;
-    left: 160px;
-    top: 88px;
-}
 
 .image-header{
     width: 900px;
@@ -69,7 +64,7 @@ body{
 
 .body_wrapper .shadow-left{
     position: absolute;
-    top: 225px;
+    top: 100px;
     left: -37px;
     width: 37px;
     height: 500px;
@@ -79,7 +74,7 @@ body{
 
 .body_wrapper .shadow-right{
     position: absolute;
-    top: 225px;
+    top: 100px;
     right: -37px;
     width: 37px;
     height: 500px;
@@ -139,27 +134,37 @@ a, a:visited{
     color: rgb(0,143,71);
 }
 
+
+.header .slogan{
+    position: absolute;
+    left: 160px;
+    top: 68px;
+}
+
 .logo{
     position: absolute;
     left: 50px;
-    top: 60px;
+    top: 40px;
     width: 80px;
     height: 52px;
-}
-
-img{
-    border: 0px solid #FFF;
 }
 
 .main-menu{
     background-image: url(../img/navi-bg.png);
     background-repeat: repeat-x;
-    margin-top: 75px;
+    margin-top: 55px;
     float: right;
     height: 36px;
     position: relative;
     min-width: 280px;
 }
+
+
+img{
+    border: 0px solid #FFF;
+}
+
+
 
 .main-menu .zapfen{
     width: 36px;
