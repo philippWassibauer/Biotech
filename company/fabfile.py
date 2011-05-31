@@ -50,8 +50,16 @@ def init_db():
     local("./manage.py syncdb --all")
     local("./manage.py migrate --fake")
 
+def get_cms_data():
+    with cd(server_path):
+        run("rm /home/ubuntu/cms.json")
+        run('./manage.py dumpdata cms text picture link file snippet googlemap mptt menus publisher --indent 4 -n > /home/ubuntu/cms.json')
+        get("/home/ubuntu/cms.json", "cms.json")
+    local("./manage.py loaddata cms.json")
+
 def dump_cms_data():
-    local('./manage.py dumpdata cms text picture link file snippet googlemap mptt menus publisher --indent 4 > fixtures/cms.json')
+    run('./manage.py dumpdata cms text picture link file snippet googlemap mptt menus publisher --indent 4 > fixtures/cms.json')
+
 
 def load_cms_data():
     local("./manage.py loaddata fixtures/cms.json")
