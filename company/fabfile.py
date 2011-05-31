@@ -5,11 +5,11 @@ import os
 env.user = 'ubuntu'
 env.hosts = ['46.137.95.92']
 
-server_path = "/home/ubuntu/.virtualenvs/biotech/checkouts/biotech.at/company"
+
 env.chef_executable = '/var/lib/gems/1.8/bin/chef-solo'
 env.shell = "/bin/bash -li -c"
 env.key_filename = "biotech.pem"
-server_path = "/home/ubuntu/.virtualenvs/biotech/checkouts/biotech.at/biotech/"
+server_path = "/home/ubuntu/.virtualenvs/biotech/checkouts/biotech.at/company"
 env.chef_executable = '/usr/bin/chef-solo'
 
 def initialize():
@@ -70,7 +70,6 @@ def update_deploy():
     deploy()
     
 def deploy():
-
     with cd(server_path):
         run('git pull origin master')
         run("workon biotech; python manage.py collectstatic --noinput;")
