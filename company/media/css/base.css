@@ -64,7 +64,7 @@ body{
 
 .body_wrapper .shadow-left{
     position: absolute;
-    top: 100px;
+    top: 50px;
     left: -37px;
     width: 37px;
     height: 500px;
@@ -74,7 +74,7 @@ body{
 
 .body_wrapper .shadow-right{
     position: absolute;
-    top: 100px;
+    top: 50px;
     right: -37px;
     width: 37px;
     height: 500px;
@@ -492,12 +492,19 @@ img{
 
 .grey-box .right-corner-image{
     position: absolute;
-    right: 20px;
+    right: 30px;
     bottom: 0px;
 }
 
 .limited-width-text{
   margin-right: 160px;
+}
+
+.limited-width-text a {
+	margin-top:10px;
+	font-weight:bold;
+	text-decoration:none;
+	text-align:right;
 }
 
 .big-green-button{
