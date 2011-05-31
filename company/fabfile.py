@@ -72,9 +72,13 @@ def restart():
     "Restart (or just start) the server"
     sudo('restart biotech-gunicorn', pty=True)
 
-def update_deploy():
+
+def update():
     local("git commit -a -m 'quick update'")
     local("git push origin master")
+
+def update_deploy():
+    update()
     deploy()
     
 def deploy():
