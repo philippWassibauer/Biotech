@@ -27,5 +27,7 @@ boto==2.0b3
 python-memcached==1.47
 django-memcached==0.1.2
 
+greenlet
+eventlet
 
 -e svn+http://django-rosetta.googlecode.com/svn/trunk/#egg=rosetta
