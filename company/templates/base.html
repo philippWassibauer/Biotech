@@ -59,12 +59,14 @@
                     {% block header %}
                         <div class="header">
                             <a  class="logo" href="/">
-                                <img src="{{ STATIC_URL }}img/logo.png" alt="BIO-TECH" />
+                                <img src="{{ STATIC_URL }}img/logo-biotech.png" alt="BIO-TECH" />
                             </a>
-
+                            <img class="slogan" src="{{ STATIC_URL }}img/kontrolle-ist-besser.png" alt="Kontrolle ist besser" />
                             <div class="main-menu">
                                 <img class="zapfen" src="{{ STATIC_URL }}img/navi-zapfen-links.png" />
                                 <ul>{% show_menu 0 100 0 100 %}</ul>
+                                <img class="menu-rechts" src="{{ STATIC_URL }}img/navi-knick-rechts.png" />
+
                             </div>
                         </div>
                     {% endblock %}

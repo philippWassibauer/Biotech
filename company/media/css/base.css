@@ -11,16 +11,15 @@ body{
 
 .header{
     position: relative;
-    height: 100px;
+    height: 200px;
     z-index: 99;
+    background-image: url(../img/header-verlauf.png);
 }
 
 .header .slogan{
     position: absolute;
-    right: 10px;
-    top: 20px;
-    font-size: 16px;
-    color: #666;
+    left: 160px;
+    top: 88px;
 }
 
 .image-header{
@@ -142,10 +141,10 @@ a, a:visited{
 
 .logo{
     position: absolute;
-    left: 3px;
-    top: 5px;
-    width: 107px;
-    height: 76px;
+    left: 50px;
+    top: 60px;
+    width: 80px;
+    height: 52px;
 }
 
 img{
@@ -155,7 +154,7 @@ img{
 .main-menu{
     background-image: url(../img/navi-bg.png);
     background-repeat: repeat-x;
-    margin-top: 40px;
+    margin-top: 75px;
     float: right;
     height: 36px;
     position: relative;
@@ -349,7 +348,7 @@ img{
 
 .schnellhilfe h3{
     position: relative;
-    margin: 20px 0 18px 50px;
+    margin: 17px 0 18px 50px;
     color: #FFF;
     height: 16px;
     font-size: 16px;
@@ -439,18 +438,29 @@ img{
 }
 
 .grey-box{
-    background-image: url(../img/boxen_bg.png);
-    background-repeat: repeat-x;
-    background-position: bottom;
     margin-bottom: 30px;
     position: relative;
     overflow: hidden;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border: 1px solid #EFEFEF;
-    min-height: 160px;
-    padding: 20px;
+    border-radius: 1px;
+    -moz-border-radius: 1px;
+    -webkit-border-radius: 1px;
+    border: 1px solid #F6F6F6;
+    padding: 2px;
+}
+
+.menu-rechts{
+  position:absolute;
+  right: -12px;
+  top: 0px;
+}
+
+.grey-box .inner{
+  background-image: url(../img/boxen_bg.png);
+  background-repeat: repeat-x;
+  background-position: bottom;
+  padding: 18px;
+  min-height: 120px;
+  position: relative;
 }
 
 .grey-box h2{
@@ -462,35 +472,49 @@ img{
 }
 
 .button-box{
-    margin-top: 18px;
-    
+    margin: 0px 15px 0 0;
+    float: left;
+    width: 263px;
+}
+
+.button-box.last {
+  margin-right: 0px;
 }
 
 .button-box .big-green-button{
-    width: 230px;
+
 }
 
 .grey-box .right-corner-image{
     position: absolute;
-    right: 10px;
+    right: 20px;
     bottom: 0px;
+}
+
+.limited-width-text{
+  margin-right: 160px;
 }
 
 .big-green-button{
     background-image: url(../img/green-button.png);
     background-repeat: repeat-x;
     background-position: top;
-    padding: 5px 10px 8px;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    color: #FFF;
+    padding: 5px 10px 5px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    color: #FFF !important;
     background-color: #028145;
-    border: 1px solid #028145;
-    font-size: 16px;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: Verdana, sans-serif;
     line-height: 16px;
     text-decoration: none;
-    display: inline-block;
-    margin: 0 10px 3px 0;
+    display: block;
+    margin: 0 0 2px 0;
+}
+
+.big-green-button:hover{
+  text-decoration: none;
 }
 
