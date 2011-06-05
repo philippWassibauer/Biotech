@@ -4,7 +4,7 @@ import sys
 
 # Settings to configure manually
 PORT = 8888
-PROC_NAME = 'zweitwelt_gunicorn'
+PROC_NAME = 'biotech_gunicorn'
 LOGFILE_NAME = 'gunicorn.log'
 TIMEOUT = 3600
 # The settings get autofetched

@@ -7,15 +7,6 @@ group "ubuntu" do
   gid 938
 end
 
-user "ubuntu" do
-    comment "Ubuntu user"
-    uid "1032"
-    gid "ubuntu"
-    home "/home/ubuntu"
-    shell "/bin/zsh"
-    password "$1$DnKvUKnf$hZU7x23aZVM.h6Nxm5x9s1"
-    system true
-end
 
 directory "#{node[:virtual_env_path]}" do
     owner "ubuntu"

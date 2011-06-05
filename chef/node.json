@@ -3,9 +3,8 @@
   "run_list": [ "application::default",
                 "application::python",
                 "application::biotech",
-                "application::memcached",
                 "application::nginx"],
-  "base_packages": ["git-core", "bash-completion"],
+  "base_packages": ["git-core"],
   "ubuntu_python_packages": ["python-mysqldb", "python-setuptools", "python-pip", "python-dev", "libpq-dev", "python-mysqldb"],
   "pip_python_packages": {"virtualenv": "1.5.1", "mercurial": "1.7"},
   "mysql": {
