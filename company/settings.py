@@ -75,7 +75,7 @@ TIME_ZONE = "Europe/Vienna"
 LANGUAGE_CODE = "de"
 LANGUAGES = (
     ("de", gettext("German")),
-    ("en", gettext("English")),
+    #("en", gettext("English")),
 )
 
 
